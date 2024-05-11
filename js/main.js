@@ -21,12 +21,21 @@ var searchFilter = () => {
   const input = document.querySelector(".form-control");
   const cards = document.getElementsByClassName("col");
   console.log(cards[1]);
-  let textBox = input.value;
+  let textBox = input.value.toLowerCase(); // Convert search term to lowercase
+
   for (let i = 0; i < cards.length; i++) {
-    let title = cards[i].querySelector(".card-body");
+    let title = cards[i].querySelector(".card-title");
+    let secTitle = cards[i].querySelector(".card-sec-title");
+
+    // Check for search term regardless of selectedColor
+    let searchTermMatch =
+      title.innerText.toLowerCase().indexOf(textBox) > -1 ||
+      secTitle.innerText.toLowerCase().indexOf(textBox) > -1;
+
     if (
-      (cards[i].classList.contains(selectedColor) || selectedColor == "") &&
-      title.innerText.toLowerCase().indexOf(textBox.toLowerCase()) > -1
+      // Show card if search term matches and color filter matches (including "الكل")
+      searchTermMatch &&
+      (selectedColor == "" || cards[i].classList.contains(selectedColor))
     ) {
       cards[i].classList.remove("d-none");
     } else {

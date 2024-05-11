@@ -14,6 +14,17 @@
   width: 100%;
   height: 70vh;
 }
+@media (max-width: 768px) {
+  .breadcrumb {
+    height: 100vh;
+  }
+}
+@media (max-width: 768px) {
+  .study-row .row > * {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}
 .layout {
   content: "";
   position: absolute;

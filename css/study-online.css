@@ -25,6 +25,11 @@
     padding-left: 0 !important;
   }
 }
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 40vh !important;
+  }
+}
 .layout {
   content: "";
   position: absolute;

@@ -5,6 +5,14 @@
   --p-color: #acacac;
 }
 
+a{
+  text-decoration: none !important;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
 .breadcrumb {
   position: relative;
   background-image: url("../img/breadcrumb-img.jpg");

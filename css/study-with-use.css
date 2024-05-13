@@ -284,7 +284,10 @@ img.vid-i.con {
   height: 3px;
 }
 .vid .progress_ .progress_bar {background-color: #d9d9d930;}
-.vid .progress_ .progress_fill{background-color: white;}
+.vid .progress_ .progress_fill{background-color: white;
+  left: -5px;
+  position: absolute;
+}
 .card .btn{
     color: #fff;
     background-color: var(--primary-color);
@@ -430,3 +433,39 @@ font-weight: 400;
 }
 
 
+/* fix navbar */
+.navbar{
+  margin-bottom: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+float: unset !important;
+  }
+  
+  .navbar-collapse.collapse#navbarSupportedContent{
+    display: flex!important;
+  }
+}
+.offcanvas-header .btn-close{
+  margin: 0!important;
+}
+
+.offcanvas-header h6{
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+  }
+  .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand span{
+    font-size: 20px; 
+  }
+  .navbar-brand img{
+    height: 40px;
+    width: auto !important;
+  }
+}

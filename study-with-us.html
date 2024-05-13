@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="png" href="img/logo.png">
 
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/study-with-use.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom-framework.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +19,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script defer src="js/video.js"></script>
+  <script defer src="js/pagination.js"></script>
   
     <title>تعلم معنا</title>
   </head>
@@ -142,6 +146,7 @@
     <section class="main container pt-5">
         <div class="card">
          <div class="vid">
+          <div class="video-container__controls">
           <img class="vid-i back" src="icons/vid-back.svg" alt="">
           <img class="vid-i next" src="icons/vid-next.svg" alt="">
           <img class="vid-i play" src="icons/vid-play.svg" alt="">
@@ -159,7 +164,13 @@
               <span class="progress_fill" style="width: 90%"></span>
             </span>
           </div>
-          <video src="" class="card-img-top"></video>
+        </div>
+          <div class="video-container">
+            <video class="video-container__video">
+              <source src="https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164" type="video/mp4"/>
+            </video>
+         
+          </div>
          </div>
   
           <div class="card-body">
@@ -178,10 +189,10 @@
 
       <div class="tabs">
         <ul class="nav nav-tabs">
-          <li  class="active" data-active="#home"><a data-toggle="tab" href="#home">عن المادة</a></li>
-          <li  data-active="#menu1"><a data-toggle="tab" href="#menu1">الموضوعات</a></li>
-          <li  data-active="#menu2"><a data-toggle="tab" href="#menu2">المدرب</a></li>
-          <li  data-active="#menu3"><a data-toggle="tab" href="#menu3" id="show-comments">الأراء</a></li>
+          <li class="active flex-1 text-center" data-active="#home"><a data-toggle="tab" href="#home">عن المادة</a></li>
+          <li class="flex-1 text-center" data-active="#menu1"><a data-toggle="tab" href="#menu1">الموضوعات</a></li>
+          <li class="flex-1 text-center" data-active="#menu2"><a data-toggle="tab" href="#menu2">المدرب</a></li>
+          <li class="flex-1 text-center" data-active="#menu3"><a data-toggle="tab" href="#menu3" id="show-comments">الأراء</a></li>
         </ul>
 
         <div class="tab-content">
@@ -755,52 +766,53 @@
             </div>
           </div>
 
-         
-          <div class="media mb-5">
-            <img src="img/Ellipse 35.png" alt="teacher image" />
-            <div>
-              <div class="d-flex justify-between items-center mb-2">
-                <h3 class="sub-heading">عبد العزيز الجمال</h3>
-                <h3 class="sub-heading">12.2.2024</h3>
+          <div class="comments" dir="rtl">
+            <div class="media mb-5">
+              <img src="img/Ellipse 35.png" alt="teacher image" />
+              <div>
+                <div class="d-flex justify-between items-center mb-2">
+                  <h3 class="sub-heading">عبد العزيز الجمال</h3>
+                  <h3 class="sub-heading">12.2.2024</h3>
+                </div>
+                <p class="p">
+                  شخص متخصص وملم بمفاهيم علم الحاسوب وتطبيقاته المختلفة. يمتلك الأستاذ خبرة عميقة في المجال وقدرة على نقل المعرفة وتوجيه الطلاب بشكل فعال.
+                </p>
               </div>
-              <p class="p">
-                شخص متخصص وملم بمفاهيم علم الحاسوب وتطبيقاته المختلفة. يمتلك الأستاذ خبرة عميقة في المجال وقدرة على نقل المعرفة وتوجيه الطلاب بشكل فعال.
-              </p>
             </div>
-          </div>
-          <div class="media mb-5">
-            <img src="img/Ellipse 35.png" alt="teacher image" />
-            <div>
-              <div class="d-flex justify-between items-center mb-2">
-                <h3 class="sub-heading">عبد العزيز الجمال</h3>
-                <h3 class="sub-heading">12.2.2024</h3>
+            <div class="media mb-5">
+              <img src="img/Ellipse 35.png" alt="teacher image" />
+              <div>
+                <div class="d-flex justify-between items-center mb-2">
+                  <h3 class="sub-heading">عبد العزيز الجمال</h3>
+                  <h3 class="sub-heading">12.2.2024</h3>
+                </div>
+                <p class="p">
+                  شخص متخصص وملم بمفاهيم علم الحاسوب وتطبيقاته المختلفة. يمتلك الأستاذ خبرة عميقة في المجال وقدرة على نقل المعرفة وتوجيه الطلاب بشكل فعال.
+                </p>
               </div>
-              <p class="p">
-                شخص متخصص وملم بمفاهيم علم الحاسوب وتطبيقاته المختلفة. يمتلك الأستاذ خبرة عميقة في المجال وقدرة على نقل المعرفة وتوجيه الطلاب بشكل فعال.
-              </p>
             </div>
-          </div>
-          <div class="media mb-5">
-            <img src="img/Ellipse 35.png" alt="teacher image" />
-            <div>
-              <div class="d-flex justify-between items-center mb-2">
-                <h3 class="sub-heading">عبد العزيز الجمال</h3>
-                <h3 class="sub-heading">12.2.2024</h3>
+            <div class="media mb-5">
+              <img src="img/Ellipse 35.png" alt="teacher image" />
+              <div>
+                <div class="d-flex justify-between items-center mb-2">
+                  <h3 class="sub-heading">عبد العزيز الجمال</h3>
+                  <h3 class="sub-heading">12.2.2024</h3>
+                </div>
+                <p class="p">
+                  شخص متخصص وملم بمفاهيم علم الحاسوب وتطبيقاته المختلفة. يمتلك الأستاذ خبرة عميقة في المجال وقدرة على نقل المعرفة وتوجيه الطلاب بشكل فعال.
+                </p>
               </div>
-              <p class="p">
-                شخص متخصص وملم بمفاهيم علم الحاسوب وتطبيقاته المختلفة. يمتلك الأستاذ خبرة عميقة في المجال وقدرة على نقل المعرفة وتوجيه الطلاب بشكل فعال.
-              </p>
             </div>
           </div>
 
-          <div class="d-flex items-center gap-2 justify-center">
-            <img src="icons/forward.svg" alt="forward icon">
-            <img src="icons/arrow-right.svg" alt="right arrow icon">
-            <p>...</p>
+          <div class="d-flex items-center gap-2 justify-center pagination">
+            <img id="goForward" src="icons/forward.svg" alt="forward icon">
+            <img id="next" src="icons/arrow-right.svg" alt="right arrow icon">
+            <p class="num">3</p>
             <p class="active num">2</p>
             <p class="num">1</p>
-            <img src="icons/arrow-right.svg" alt="right arrow icon" class="h-reverse">
-            <img src="icons/forward.svg" alt="forward icon" class="h-reverse">
+            <img id="back" src="icons/arrow-right.svg" alt="right arrow icon" class="h-reverse">
+            <img id="GoBackward" src="icons/forward.svg" alt="forward icon" class="h-reverse">
           </div>  
         </div>              
     </section>

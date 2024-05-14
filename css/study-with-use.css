@@ -565,7 +565,7 @@ border-radius: 21214rem;
 background-color: #F6B40A;
 height: 100%;
 }
-.num{
+.num,.square{
 width: 20px;
 height: 20px;
 display: grid;

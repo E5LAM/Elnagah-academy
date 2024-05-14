@@ -410,7 +410,7 @@ img.vid-i.con {
   height: 80px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.35) 60%, transparent);
   transition: opacity 150ms ease;
-  /* opacity: 0; */
+  opacity: 0;
 }
 .video-container__controls.visible{
   opacity: 1;

@@ -1,4 +1,5 @@
 const videoWrapper = document.querySelector(".video-container"),
+  videoContainer = document.querySelector(".vid"),
   video = document.querySelector(".video-container__video"),
   videoControls = document.querySelector(".video-container__controls"),
   fullscreenControl = document.querySelector(".vid-i.fs"),
@@ -16,12 +17,17 @@ const videoWrapper = document.querySelector(".video-container"),
 // Pause/play video
 playControl.addEventListener("click", (e) => {
   let $this = e.currentTarget;
-  if ($this.classList.contains("paused")) {
+  if ($this.classList.contains("pause")) {
     video.play();
+    playerControlsVisibility(false);
+    playControl.src = "icons/vid-pause.svg";
+    playControl.classList.add("pause");
   } else {
     video.pause();
+    playerControlsVisibility(true);
+    playControl.src = "icons/vid-play.svg";
   }
-  $this.classList.toggle("paused");
+  $this.classList.toggle("pause");
 });
 
 // Stop video
@@ -110,22 +116,19 @@ document.addEventListener("fullscreenchange", function (e) {
 
 // functions
 let playerControlsVisibility = (visibility) => {
-  if (visibility) {
-    videoControls.classList.add("visible");
-  } else {
-    videoControls.classList.remove("visible");
-  }
-
-  // Show player controls
-  videoWrapper.addEventListener("mouseover", () => {
-    playerControlsVisibility(true);
-  });
-
-  // Hide player controls
-  videoWrapper.addEventListener("mouseout", () => {
-    playerControlsVisibility(false);
-  });
+  if (visibility) videoControls.classList.add("visible");
+  else videoControls.classList.remove("visible");
 };
+
+// Show player controls
+videoContainer.addEventListener("mouseover", () => {
+  playerControlsVisibility(true);
+});
+
+// Hide player controls
+videoContainer.addEventListener("mouseout", () => {
+  playerControlsVisibility(false);
+});
 
 let turnFullscreen = (fullscreen) => {
   if (fullscreen) {

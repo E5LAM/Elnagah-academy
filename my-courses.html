@@ -68,7 +68,7 @@
                 <a href="points-sale.html" class="nav-link">نقاط البيع</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">المدونة</a>
+                <a class="nav-link" href="blog.html">المدونة</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">اتصل بنا</a>
@@ -139,16 +139,16 @@
                   <a class="nav-link" href="#">الاقسام</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">من نحن</a>
+                  <a class="nav-link active" href="about.html">من نحن</a>
                 </li>
                 <li class="nav-item">
                   <a href="points-sale.html" class="nav-link" >نقاط البيع</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">المدونة</a>
+                  <a class="nav-link" href="blog.html">المدونة</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">اتصل بنا</a>
+                  <a class="nav-link" href="contact.html">اتصل بنا</a>
                 </li>
               </ul>
               <div class="navar-mopile-login-and-sign-in mt-2">
@@ -190,29 +190,33 @@
 
     <section class="main container pt-5">
         <div class="card">
-         <div class="vid">
-          <img class="vid-i back" src="icons/vid-back.svg" alt="">
-          <img class="vid-i next" src="icons/vid-next.svg" alt="">
-          <img class="vid-i play" src="icons/vid-play.svg" alt="">
-          <img class="vid-i con" src="icons/vid-controller.svg" alt="">
-          <img class="vid-i fs" src="icons/vid-fullscreen.svg" alt="">
-          <div class="progress_">
-            <span id="ProgressLabel" class="sr-only">Loading</span>
-          
-            <span
-              role="progressbar"
-              aria-labelledby="ProgressLabel"
-              aria-valuenow="90"
-              class="progress_bar"
-            >
-              <span class="progress_fill" style="width: 90%"></span>
-            </span>
+          <div class="vid">
+            <div class="video-container__controls">
+            <img class="vid-i back" src="icons/vid-back.svg" alt="">
+            <img class="vid-i next" src="icons/vid-next.svg" alt="">
+            <img class="vid-i play" src="icons/vid-play.svg" alt="">
+            <img class="vid-i con" src="icons/vid-controller.svg" alt="">
+            <img class="vid-i fs" src="icons/vid-fullscreen.svg" alt="">
+            <div class="progress_">
+              <span id="ProgressLabel" class="sr-only">Loading</span>
+            
+              <span
+                role="progressbar"
+                aria-labelledby="ProgressLabel"
+                aria-valuenow="90"
+                class="progress_bar"
+              >
+                <span class="progress_fill" style="width: 90%"></span>
+              </span>
+            </div>
           </div>
-          <video  class="card-img-top" >
-            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
-            Error Message
-          </video>
-         </div>
+            <div class="video-container">
+              <video class="video-container__video">
+                <source src="https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164" type="video/mp4"/>
+              </video>
+           
+            </div>
+           </div>
   
           <div class="card-body">
             <div class="d-flex justify-between items-center">
@@ -242,10 +246,10 @@
 
       <div class="tabs">
         <ul class="nav nav-tabs">
-          <li  class="active flex-1" data-active="#home"><a data-toggle="tab" href="#home">عن المادة</a></li>
-          <li class="flex-1" data-active="#menu1"><a data-toggle="tab" href="#menu1">الموضوعات</a></li>
-          <li class="flex-1" data-active="#menu2"><a data-toggle="tab" href="#menu2">المدرب</a></li>
-          <li class="flex-1" data-active="#menu3"><a data-toggle="tab" href="#menu3" id="show-comments">الأراء</a></li>
+          <li  class="active flex-1 text-center" data-active="#home"><a data-toggle="tab" href="#home">عن المادة</a></li>
+          <li class="flex-1 text-center" data-active="#menu1"><a data-toggle="tab" href="#menu1">الموضوعات</a></li>
+          <li class="flex-1 text-center" data-active="#menu2"><a data-toggle="tab" href="#menu2">المدرب</a></li>
+          <li class="flex-1 text-center" data-active="#menu3"><a data-toggle="tab" href="#menu3" id="show-comments">الأراء</a></li>
         </ul>
 
         <div class="tab-content">
@@ -664,8 +668,8 @@
                 </p>
 
                 <div class="mt-5 d-flex flex-col gap-2">
-                  <div class="d-flex gap-3 justify-center"> <img class="icon" src="icons/papers.svg" alt="hat icon"/> <p>20 مادة</p></div>
-                  <div class="d-flex gap-3 justify-center"> <img class="icon" src="icons/grad-hat.svg" alt="hat icon"/> <p>156 طالب</p></div>
+                  <div class="d-flex gap-3"> <img class="icon" src="icons/papers.svg" alt="hat icon"/> <p>20 مادة</p></div>
+                  <div class="d-flex gap-3"> <img class="icon" src="icons/grad-hat.svg" alt="hat icon"/> <p>156 طالب</p></div>
                 </div>
                 <div class="mt-3 d-flex gap-3">
                   <p>للمتابعة :</p>
